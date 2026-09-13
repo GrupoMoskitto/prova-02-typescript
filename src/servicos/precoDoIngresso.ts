@@ -23,4 +23,12 @@ export function arredondar2(valor: number): number {
   return Math.round(valor * 100) / 100;
 }
 
-// TODO: export function precoDoIngresso(...) { ... }
+export function precoDoIngresso(precoDoIngresso: number, meiaEntrada: boolean, horario: string): number {
+  if (meiaEntrada === true) {
+    precoDoIngresso = precoDoIngresso / 2;
+  }
+  if (horaDoHorario(horario) >= 18) {
+    precoDoIngresso = precoDoIngresso * 1.1;
+  }
+  return arredondar2(precoDoIngresso);
+}
