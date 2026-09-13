@@ -60,6 +60,17 @@ export interface PedidoVenda {
   tipo: TipoIngresso;
 }
 
+export interface SessaoResumo {
+  id: string;
+  titulo: string;
+  horario: string;
+  sala: Sala;
+  formato: Formato;
+  vendidos: number;
+  capacidade: number;
+  status: StatusSessao;
+}
+
 // ═══════════════════════════════════════════════════════════════════
 //  AGORA E COM VOCE — um tipo nasce junto com a questao que o usa
 // ═══════════════════════════════════════════════════════════════════
